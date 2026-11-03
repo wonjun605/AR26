@@ -9,13 +9,20 @@ EditorBuildSettings:
     path: Assets/10.Scenes/sample.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
-    path: Assets/01.ARTest.unity
+    path: Assets/10.Scenes/01.ARTest.unity
     guid: 22bd4767f541e455db85ee91bb5ef28d
-  - enabled: 1
-    path: Assets/02.Ruler.unity
+  - enabled: 0
+    path: Assets/10.Scenes/02.Ruler.unity
     guid: 777ef1b9278664d8a8f94d289d857c5d
+  - enabled: 0
+    path: Assets/10.Scenes/ZombieWanderScene.unity
+    guid: a7d1e4183273b4cc382774a62b2c3305
+  - enabled: 1
+    path: Assets/10.Scenes/04.Draw Sphere.unity
+    guid: 0587822078d8b4406b72c6baf86433e6
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: a05dc30711400469c9953e15d3808734, type: 2}
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 40bb9757bf3c143d89ea5a02bd4750ec, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f54f1cad7c5834519bc13608cd30fe71, type: 2}
