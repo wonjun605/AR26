@@ -26,7 +26,7 @@ public class PlaceSphare : MonoBehaviour
         //     GameObject go = Instantiate(spherePrefab, touchPosition, transform.rotation);
         //     go.transform.parent = parentTransform;
         //     go.transform.position = touchPosition;
-
+        //}
         if(EventSystem.current.currentSelectedGameObject) return;
         var touchScreen = Touchscreen.current;
         if (touchScreen == null) return;
@@ -39,6 +39,8 @@ public class PlaceSphare : MonoBehaviour
 
         GameObject go = Instantiate(spherePrefab, worldPos, Quaternion.identity);
         go.transform.parent = parentTransform;
+        
+        GameManager.instance.ShowMessage("Sphere generated.");
     }
 }
 

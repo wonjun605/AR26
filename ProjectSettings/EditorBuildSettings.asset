@@ -17,9 +17,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/10.Scenes/ZombieWanderScene.unity
     guid: a7d1e4183273b4cc382774a62b2c3305
-  - enabled: 1
+  - enabled: 0
     path: Assets/10.Scenes/04.Draw Sphere.unity
     guid: 0587822078d8b4406b72c6baf86433e6
+  - enabled: 1
+    path: Assets/10.Scenes/05.Plane Test.unity
+    guid: 1012df4aa7ba045bb9721ebd4f5e1d32
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: a05dc30711400469c9953e15d3808734, type: 2}
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
