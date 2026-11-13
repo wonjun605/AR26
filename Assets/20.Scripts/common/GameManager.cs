@@ -1,12 +1,16 @@
 using TMPro;
-using Unity.Android.Gradle;
-using UnityEditor.Build.Content;
 using UnityEngine;
-using UnityEngine.XR.ARCore;
 
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI messageText;
+    public bool isDrawing;
+    [SerializeField] Camera arCamera;
+    [SerializeField] GameObject spherePrefab;
+    [SerializeField] Transform parentTransform;
+    [SerializeField, Min(0.001f)] float drawSpacing = 0.02f;
+
+    Vector3? lastDrawPosition;
     
     public static GameManager instance
     {
@@ -29,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowMessage(string message)
     {
-        messageText.text = message;
+        if (messageText != null) messageText.text = message;
     }
 
     private void Update()
@@ -38,12 +42,22 @@ public class GameManager : MonoBehaviour
     }
     void DrawSpheres()
     {
-        if (isDrawing == false) return;
+        if (!isDrawing)
+        {
+            lastDrawPosition = null;
+            return;
+        }
 
-        Vector3 currentPosition = ArCameraConfig.ScreenToWorldPoinf(
-            Ndk Vector3(Screen.width/2, Screen.height/2, 0.5r);
-            
-        GameObject go = Instantiage()
-        )
+        var camera = arCamera != null ? arCamera : Camera.main;
+        if (camera == null || spherePrefab == null) return;
+
+        var screenCenter = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0.5f);
+        var position = camera.ScreenToWorldPoint(screenCenter);
+        if (lastDrawPosition.HasValue &&
+            (position - lastDrawPosition.Value).sqrMagnitude < drawSpacing * drawSpacing)
+            return;
+
+        Instantiate(spherePrefab, position, Quaternion.identity, parentTransform);
+        lastDrawPosition = position;
     }
 }
