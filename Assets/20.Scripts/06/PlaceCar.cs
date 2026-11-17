@@ -7,7 +7,11 @@ using UnityEngine.XR.ARSubsystems;
 public class PlaceCar : MonoBehaviour
 {
     public GameObject marker;
+    public GameObject myCar;
+
     [SerializeField] ARRaycastManager arRayManager;
+    List<GameObject> carList = new List<GameObject>();
+
     [SerializeField] GameObject carPrefab;
     GameObject placedCar;
     readonly List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -71,5 +75,23 @@ public class PlaceCar : MonoBehaviour
         part.transform.localPosition = position;
         part.transform.localScale = scale;
         return part.transform;
+    }
+
+    public void PlaceMyCar()
+    {
+
+        GameObject go = Instantiate(myCar, marker.transform.position, marker.transform.rotation);
+        carList.Add(go);
+
+    }
+
+    public void RemoveLastCar()
+    {
+        int count = carList.Count;
+        if(count == 0) return;
+
+        GameObject go = carList[count -1];
+        Destroy(go);
+        carList.RemoveAt(count - 1);
     }
 }
