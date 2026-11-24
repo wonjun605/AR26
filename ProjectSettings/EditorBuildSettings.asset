@@ -23,11 +23,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/10.Scenes/05.Plane Test.unity
     guid: 1012df4aa7ba045bb9721ebd4f5e1d32
-  - enabled: 1
+  - enabled: 0
     path: Assets/10.Scenes/08.Image Tracking.unity
     guid: b17c311ef01b54aeb8ed1a3acb64ce71
+  - enabled: 1
+    path: Assets/10.Scenes/09.MultipleImageTracker.unity
+    guid: 710581ade495f44a288c51af9cffab12
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: a05dc30711400469c9953e15d3808734, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: c8ccfb5841ae2421f9bb80623acb67c8, type: 2}
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 40bb9757bf3c143d89ea5a02bd4750ec, type: 2}

@@ -1,7 +1,4 @@
 using System.Collections.Generic;
-using NUnit.Framework;
-using TMPro;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
@@ -49,20 +46,20 @@ public class DrawLines : MonoBehaviour
     {
         if(!canDraw) return;
         Vector3 drawPosition = arCam.ScreenToWorldPoint(
-            new Vector3(Screen.width/2, Screen.height/2, 0.2f);
+            new Vector3(Screen.width / 2, Screen.height / 2, 0.2f));
 
-            if(isStarting)
+        if(isStarting)
         {
             ARLine line = new ARLine(lineSettings);
             lineCount++;
             lines.Add(lineCount, line);
             line.AddNewLineRenderer(transform, drawPosition);
+            isStarting = false;
         }
         else
         {
             lines[lineCount].AddPoint(drawPosition);
         }
-        )
     }
 }   
 
