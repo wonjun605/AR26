@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: qrimage
-  productName: MIT
+  companyName: scnu
+  productName: FaceF
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -173,7 +173,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.qrimage.MIT
     Standalone: com.Unity-Technologies.com.unity.template.urp-blank
-    iPhone: com.qrimage.MIT
+    iPhone: com.scnu.FaceF
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -506,6 +506,9 @@ PlayerSettings:
   m_BuildTargetDefaultTextureCompressionFormat:
   - serializedVersion: 3
     m_BuildTarget: Android
+    m_Formats: 03000000i
+  - serializedVersion: 3
+    m_BuildTarget: iOS
     m_Formats: 03000000i
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
